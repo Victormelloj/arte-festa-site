@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arte Festa - Buffet Infantil de Luxo em Araucária</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Chewy&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff9fb;
+        }
+        
+        .title-font {
+            font-family: 'Chewy', cursive;
+        }
+        
+        .bg-primary {
+            background-color: #ff66b3;
+        }
+        
+        .bg-secondary {
+            background-color: #66ccff;
+        }
+        
+        .btn-pink {
+            background-color: #ff66b3;
+            transition: all 0.3s;
+        }
+        
+        .btn-pink:hover {
+            background-color: #ff3385;
+            transform: translateY(-2px);
+        }
+        
+        .btn-blue {
+            background-color: #66ccff;
+            transition: all 0.3s;
+        }
+        
+        .btn-blue:hover {
+            background-color: #33bbff;
+            transform: translateY(-2px);
+        }
+        
+        .balloon-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .star-animation {
+            animation: pulse 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.8; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.1); }
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            animation: pulse 2s infinite;
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 15px;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406723558058627104/LOGO_PNG_2.png?ex=68a380e7&is=68a22f67&hm=559e40f23b769b766f11e161e64e894ae57cfa243bba20810932431b9f6e1eb2&" alt="Logo Arte Festa - Buffet Infantil em Araucária com ilustração de balões coloridos" class="h-16">
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-pink-500 font-medium">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-pink-500 font-medium">Sobre Nós</a>
+                <a href="#boys" class="text-gray-700 hover:text-blue-500 font-medium">Meninos</a>
+                <a href="#girls" class="text-gray-700 hover:text-pink-500 font-medium">Meninas</a>
+                <a href="#premium" class="text-gray-700 hover:text-purple-500 font-medium">Premium</a>
+                <a href="#contact" class="text-gray-700 hover:text-pink-500 font-medium">Contato</a>
+            </nav>
+            
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white absolute w-full left-0 px-4 pb-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700">Home</a>
+            <a href="#about" class="block py-2 text-gray-700">Sobre Nós</a>
+            <a href="#boys" class="block py-2 text-gray-700">Meninos</a>
+            <a href="#girls" class="block py-2 text-gray-700">Meninas</a>
+            <a href="#premium" class="block py-2 text-gray-700">Premium</a>
+            <a href="#contact" class="block py-2 text-gray-700">Contato</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 bg-gradient-to-r from-blue-100 to-pink-100 relative overflow-hidden">
+        <div class="absolute top-20 right-20 w-16 h-16 rounded-full bg-yellow-300 opacity-20 star-animation"></div>
+        <div class="absolute bottom-40 left-20 w-12 h-12 rounded-full bg-blue-300 opacity-20 balloon-animation"></div>
+        <div class="absolute top-1/2 right-1/4 w-20 h-20 rounded-full bg-pink-300 opacity-20 balloon-animation" style="animation-delay: 0.5s;"></div>
+        
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="title-font text-4xl md:text-6xl text-pink-600 mb-4">Arte Festa</h1>
+                <h2 class="text-xl md:text-2xl text-gray-800 mb-6">Transformando sonhos em realidade!</h2>
+                <p class="text-gray-600 mb-8 max-w-lg">O buffet infantil mais encantador da região metropolitana, especializado em festas de luxo que fazem os olhos das crianças brilharem!</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="btn-pink text-white px-6 py-3 rounded-full font-medium shadow-lg">Solicitar Orçamento</a>
+                    <a href="#about" class="btn-blue text-white px-6 py-3 rounded-full font-medium shadow-lg">Conheça Nosso Espaço</a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 relative">
+                <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406734992423256114/Design_sem_nome_15.png?ex=68a38b8e&is=68a23a0e&hm=367e3ad76d13f7d90b53e5d4208e7aa7ebee715efff2f7129da2fa5a9efdc791&" alt="Festas infantis luxuosas com decoração temática completa e crianças felizes brincando" class="rounded-xl shadow-2xl border-8 border-white transform rotate-2">
+                <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-yellow-200 rounded-full opacity-30 -z-10 animation-delay-1s"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl text-gray-800 mb-4">Sobre a Arte Festa</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Nossa paixão é criar festas mágicas e memoráveis para seus pequenos!</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">O diferencial Torre Nassa</h3>
+                    <p class="text-gray-600 mb-6">Nossa exclusiva torre de brinquedos, com mais de 5 metros de altura, é o destaque que faz a diferença em nossas festas. Com escorregador, piscina de bolinhas e muitas surpresas!</p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Espaço próprio e seguro</h3>
+                    <p class="text-gray-600 mb-6">Mais de 300m² de área especialmente projetada para festas infantis, com ambientes climatizados, área de alimentação e playground monitorado.</p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Equipe especializada</h3>
+                    <p class="text-gray-600">Monitores treinados, decoradores profissionais e todo o cuidado para garantir uma festa perfeita do início ao fim.</p>
+                </div>
+                
+                <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406728644096823442/Imagem_do_WhatsApp_de_2025-08-17_as_16.56.37_c67cd434.jpg?ex=68a385a4&is=68a23424&hm=d73da6528be7410c467c30a438ea1f9ee6757e649293e7548194e1b2ddfbf1ac&" alt="Torre Nassa exclusiva com quase 6 metros de altura, colorida e divertida com escorregador e piscina de bolinhas" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406729498652840097/Design_sem_nome_13.png?ex=68a38670&is=68a234f0&hm=c3c514c918a26b0196b237ed71c89cba72a31435c3b3840889cf0183642842c1&" alt="Espaço amplo do buffet infantil com mesas decoradas e área de brincadeiras" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3776318f-db22-470e-a0a3-e307f2b1a34a.png" alt="Equipe especializada e uniformizada da Arte Festa sorrindo e brincando com crianças" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b46fed25-eaa9-4d20-af35-0388bcc363e3.png" alt="Detalhes da decoração de luxo com mesas decoradas e lembrancinhas personalizadas" class="w-full h-full object-cover rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boys Theme Section -->
+    <section id="boys" class="py-20 bg-blue-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl text-blue-600 mb-4">Decorações para Meninos</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Temas incríveis que vão deixar os meninos encantados!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406707458482765905/post-artefestaaraucaria-aug-05-2024.jpeg?ex=68a371e9&is=68a22069&hm=1f1419653081c621d2cc91aec206f0cb51e1aa060f0f55ae30d4a2c4f7f56a5c&" alt="Decoração tema super heróis com os personagens mais populares em tons vibrantes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Super Heróis</h3>
+                        <p class="text-gray-600 mb-4">Marvel, DC e muito mais! Capas, máscaras e toda a aventura dos quadrinhos.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406707457832652811/post-artefestaaraucaria-jul-10-2025.jpeg?ex=68a371e9&is=68a22069&hm=ff4fa72bafd798311080a87210172bda6b1f37e56ab6899629be7f0fff18aea7&" alt="Decoração jurássica com dinossauros em 3D e elementos pré-históricos" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Dinossauros</h3>
+                        <p class="text-gray-600 mb-4">Uma viagem ao mundo jurássico com dinossauros impressionantes!</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406707458147094548/post-artefestaaraucaria-may-02-2025.jpeg?ex=68a371e9&is=68a22069&hm=cae40eabf1723a5ecb4d434a5fafc01bdad1530dc297dd0481f20b9e6e1c0703&" alt="Tema automobilístico com pista de corrida e carrinhos esportivos decorados" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Carrinhos</h3>
+                        <p class="text-gray-600 mb-4">Velocidade e adrenalina com os carrinhos mais desejados.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2623f1f2-27b2-4ac2-ac38-f0888cc1f907.png" alt="Festa espacial com foguetes, planetas e elementos de exploração cósmica" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Espaço</h3>
+                        <p class="text-gray-600 mb-4">Uma aventura intergaláctica com foguetes e estrelas!</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406709159923023902/post-artefestaaraucaria-jul-03-2024.jpeg?ex=68a3737f&is=68a221ff&hm=84fcbdac563b2be1e8703a0852418034100cf98f7811524c6960558e48ad9c1d&" alt="Decoração esportiva com gramado sintético e elementos de futebol profissional" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Futebol</h3>
+                        <p class="text-gray-600 mb-4">Para os pequenos craques que amam o esporte mais popular!</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406709159499403546/post-artefestaaraucaria-sep-19-2024.jpeg?ex=68a3737f&is=68a221ff&hm=709b16bd436b1b6ba41601bbe3ed8c2d89d0419eebd33bae944f785424c85738&" alt="Tema rural com animais da fazenda e cenário campestre acolhedor" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Fazendinha</h3>
+                        <p class="text-gray-600 mb-4">Um dia no campo com animais, tratores e muito divertimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Girls Theme Section -->
+    <section id="girls" class="py-20 bg-pink-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl text-pink-600 mb-4">Decorações para Meninas</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Sonhos encantados que vão fazer as princesas sorrirem!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406711013914706101/post-artefestaaraucaria-apr-03-2023.jpeg?ex=68a37539&is=68a223b9&hm=bada2ddea31819bd3c5d1c13049366928a1caef1caa9cac85fc2890613786e6a&" alt="Decoração de princesas com castelo, coroas e vestidos brilhantes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Princesas</h3>
+                        <p class="text-gray-600 mb-4">Um verdadeiro conto de fadas com as princesas mais queridas!</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406712397204426822/post-artefestaaraucaria-may-01-2024.jpeg?ex=68a37682&is=68a22502&hm=0555d1ea6605214577fcc5a22501b22531dcbf473bed1a53e9c16f97c5d2eb9b&" alt="Mundo mágico de unicórnios com arco-íris, nuvens e glitter" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Unicórnios</h3>
+                        <p class="text-gray-600 mb-4">Magia e fantasia com os seres mais encantados do mundo!</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406720833615040582/pngtree-young-ballerina-dancer-ballet-graphics-png-image_12205198.png?ex=68a37e5e&is=68a22cde&hm=45012dd047c3f2170263bb6a29e109eb0e32c58c5fe6c6df230aaaa2f2095367&" alt="Tema ballet com sapatilhas, tutus e cenário de teatro clássico" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Bailarina</h3>
+                        <p class="text-gray-600 mb-4">Graciosidade e elegância para as pequenas estrelas do ballet.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://cdn.discordapp.com/attachments/1153109554893176975/1406711014396792942/post-artefestaaraucaria-mar-04-2024.jpeg?ex=68a37539&is=68a223b9&hm=4e9a36edaf29a9e05f4255d3c5300fd5ab87fd7066a8303c191b5aa5f537afce&" alt="Tema Frozen com Elsa, Anna e Olaf em um cenário invernal brilhante" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Frozen</h3>
+                        <p class="text-gray-600 mb-4">O mundo gelado mais amado pelas crianças!</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1558aa3f-6c61-4ab8-b5f9-5485d680c3b4.png" alt="Decoração floral romântica com flores naturais e tons suaves" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Floral</h3>
+                        <p class="text-gray-600 mb-4">Delicadeza e beleza em um jardim encantado.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform transition hover:shadow-xl">
+                    <div class="gallery-item h-64">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0be7f46d-8a3a-4c94-88c9-8cc0ca2f6da6.png" alt="Tema sereia com conchas, pérolas e cenário submarino colorido" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Sereia</h3>
+                        <p class="text-gray-600 mb-4">Uma festa debaixo d'água com as sereias mais charmosas!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Section -->
+    <section id="premium" class="py-20 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl text-purple-600 mb-4">Decorações Premium</h2>
+                <div class="w-20 h-1 bg-purple-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Experiências exclusivas e sofisticadas para festas memoráveis</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-xl flex flex-col md:flex-row">
+                    <div class="gallery-item md:w-1/2">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/18bc5c77-7adf-401f-a706-cf42c36e4f7b.png" alt="Festa premium com mesa de doces gourmet, decoração em ouro e flores exóticas" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-1/2">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Festa de Luxo Completa</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Decoração premium com flores frescas e detalhes em ouro</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Mesa de doces gourmet com quitutes selecionados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Fotógrafo profissional durante todo o evento</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Monitores exclusivos para as crianças</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Lembrancinhas personalizadas de alta qualidade</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden shadow-xl flex flex-col md:flex-row">
+                    <div class="gallery-item md:w-1/2">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c4a009bb-823c-4189-947b-d1452e373e42.png" alt="Celebração de aniversário premium com decoração sofisticada e buffet refinado" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 md:w-1/2">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Aniversário Temático Premium</h3>
+                        <ul class="space-y-3 text-gray-600 mb-6">
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Tema personalizado criado especialmente para você</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Decoração exclusiva com elementos em 3D</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Buffet infantil premium com opções saudáveis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Recreação temática com personagens caracterizados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-star text-purple-500 mt-1 mr-2"></i>
+                                <span>Book fotográfico de luxo como lembrança</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-6">Conte com nossa equipe para criar uma festa exclusiva que supere todas as expectativas!</p>
+                <a href="#contact" class="btn-pink text-white px-8 py-4 rounded-full font-medium text-lg shadow-xl inline-block">Quero minha Festa Premium</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="title-font text-3xl md:text-4xl text-gray-800 mb-4">O que dizem nossos clientes</h2>
+                <div class="w-20 h-1 bg-pink-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Feedback de pais e crianças que já viveram a experiência Arte Festa</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 rounded-xl p-8 testimonial-card shadow-md hover:shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a80df1d4-06c1-4ad8-b73c-324475e09238.png" alt="Mãe sorridente com criança no colo em frente ao buffet Arte Festa" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ana Cláudia</h4>
+                            <p class="text-sm text-gray-600">Mãe da Sofia (5 anos)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"A festa da Sofia foi mágica! Tudo perfeito, desde a decoração até a atenção da equipe. As crianças adoraram a Torre Nassa e não pararam de brincar!"</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 testimonial-card shadow-md hover:shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/89c1b423-d338-4f92-b67d-ecbff9a3e4c0.png" alt="Pai abraçando filho em frente ao tema de super heróis na festa" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ricardo</h4>
+                            <p class="text-sm text-gray-600">Pai do Pedro (7 anos)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"O tema de super heróis ficou incrível! Detalhes impressionantes e o espaço é muito bem organizado. Foi a melhor festa que já fizemos para o Pedro."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <div>   
+                             <a href="https://wa.me/SEUNUMERO?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento" 
+      class="whatsapp-btn bg-green-500 text-white p-4 rounded-full shadow-lg">
+      <i class="fab fa-whatsapp text-2xl"></i>
+   </a>
+            
